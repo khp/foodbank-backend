@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023205247) do
+ActiveRecord::Schema.define(version: 20151023215129) do
 
   create_table "newsposts", force: :cascade do |t|
     t.text     "content"
-    t.datetime "date_posted"
     t.string   "poster"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "newsposts_tags", force: :cascade do |t|
