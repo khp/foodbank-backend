@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby "2.2.3"
 
 gem 'rails', '4.2.4'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -17,6 +16,7 @@ gem 'json'
 gem 'chronic',      '0.10.2'
 gem 'bootstrap-slider-rails'
 gem 'nprogress-rails'
+gem 'pg',             '0.17.1'
 
 group :development, :test do
   gem 'byebug'
@@ -28,7 +28,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
 end
 
