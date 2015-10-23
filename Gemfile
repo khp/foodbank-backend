@@ -16,9 +16,9 @@ gem 'json'
 gem 'chronic',      '0.10.2'
 gem 'bootstrap-slider-rails'
 gem 'nprogress-rails'
-gem 'pg',             '0.17.1'
 
 group :development, :test do
+  gem 'sqlite3',     '1.3.9'
   gem 'byebug'
   gem 'pry'
 end
@@ -28,6 +28,8 @@ group :development do
 end
 
 group :production do
+
+  gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
 end
 
