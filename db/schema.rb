@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023215129) do
+ActiveRecord::Schema.define(version: 20151023221138) do
+
+  create_table "hours", force: :cascade do |t|
+    t.datetime "start"
+    t.datetime "end"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "postal_code"
+    t.string   "city"
+    t.string   "phone_number"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "newsposts", force: :cascade do |t|
     t.text     "content"

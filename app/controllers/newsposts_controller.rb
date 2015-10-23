@@ -6,7 +6,7 @@ class NewspostsController < ApplicationController
   def index
     @newsposts = Newspost.all
     respond_to do |format| 
-      format.json { render :json => @newsposts, :include => :tags }
+      format.json { render :json => @newsposts }
       format.html
     end
   end

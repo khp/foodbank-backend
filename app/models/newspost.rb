@@ -5,6 +5,7 @@ class Newspost < ActiveRecord::Base
 
   def as_json(options={})
     options[:except] ||= [:id]
+    options[:include] ||= { :tags => { :only => [:name] } }
     super(options)
   end
 end
