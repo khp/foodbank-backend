@@ -3,4 +3,9 @@ class Newspost < ActiveRecord::Base
   validates :content, presence: true
   validates :date_posted, presence: true
   validates :poster, presence: true, length: { minimum: 3, maximum: 15 }
+
+  def as_json(options={})
+    options[:except] ||= [:id]
+    super(options)
+  end
 end

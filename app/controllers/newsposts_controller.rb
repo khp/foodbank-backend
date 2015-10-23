@@ -5,7 +5,10 @@ class NewspostsController < ApplicationController
   # GET /newsposts.json
   def index
     @newsposts = Newspost.all
-    render :json => @newsposts, :include => :tags
+    respond_to do |format| 
+      format.json { render :json => @newsposts, :include => :tags }
+      format.html
+    end
   end
 
   # GET /newsposts/1
