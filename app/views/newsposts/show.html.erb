@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @newspost.content %>
+</p>
+
+<p>
+  <strong>Date posted:</strong>
+  <%= @newspost.date_posted %>
+</p>
+
+<p>
+  <strong>Poster:</strong>
+  <%= @newspost.poster %>
+</p>
+
+<%= link_to 'Edit', edit_newspost_path(@newspost) %> |
+<%= link_to 'Back', newsposts_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@newspost) do |f| %>
+  <% if @newspost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@newspost.errors.count, "error") %> prohibited this newspost from being saved:</h2>
+
+      <ul>
+      <% @newspost.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :date_posted %><br>
+    <%= f.datetime_select :date_posted %>
+  </div>
+  <div class="field">
+    <%= f.label :poster %><br>
+    <%= f.text_field :poster %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
