@@ -18,6 +18,7 @@ gem 'chronic',      '0.10.2'
 gem 'bootstrap-slider-rails'
 gem 'nprogress-rails'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'devise'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
