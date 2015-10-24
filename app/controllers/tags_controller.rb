@@ -32,11 +32,11 @@ class TagsController < ApplicationController
 
     respond_to do |format|
       if @tag.save
-        format.html { redirect_to @tag, notice: 'Tag was successfully created.' }
+        format.html { redirect_to @newspost, notice: 'Tag was successfully created.' }
         format.json { render :show, status: :created, location: @tag }
       else
         format.html { render :new }
-        format.json { render json: @hour.errors, status: :unprocessable_entity }
+        format.json { render json: @tag.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -46,8 +46,8 @@ class TagsController < ApplicationController
     @tag = @newspost.tags.find(params[:id])
 
     respond_to do |format|
-      if @hour.update(params[:tag])
-        format.html { redirect_to @hour, notice: 'Tag was successfully updated.' }
+      if @tag.update_attributes(tag_params)
+        format.html { redirect_to newspost_path(@newspost), notice: 'Tag was successfully updated.' }
         format.json { render :show, status: :ok, location: @tag }
       else
         format.html { render :edit }
@@ -75,6 +75,6 @@ class TagsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tag_params
-      params.require(:tag).permit(:name)
+      params.require(:tag).permit(:name, :newspost_id)
     end
 end

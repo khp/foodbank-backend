@@ -2,19 +2,19 @@
 
 <p>
   <strong>Start time:</strong>
-  <%= @hour.start_time %>
+  <%= @hour.start %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @hour.end_time %>
+  <%= @hour.end %>
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @hour.type %>
+  <strong>Crowd:</strong>
+  <%= @hour.crowd %>
 </p>
 
 
-<%= link_to 'Edit', edit_hour_path(@hour) %> |
-<%= link_to 'Back', hours_path %>
+<%= link_to 'Edit', edit_location_hour_path(@location, @hour) %> |
+<%= link_to 'Back', location_hours_path(@location) %>

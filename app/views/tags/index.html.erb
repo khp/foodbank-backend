@@ -14,7 +14,7 @@
     <% @tags.each do |tag| %>
       <tr>
         <td><%= tag.name %></td>
-        <td><%= link_to 'Show', newspost_tags_path(@newspost, tag) %></td>
+        <td><%= link_to 'Show', newspost_tag_path(@newspost, tag) %></td>
         <td><%= link_to 'Edit', edit_newspost_tag_path(@newspost, tag) %></td>
         <td><%= link_to 'Destroy', newspost_tag_path(@newspost, tag), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -25,3 +25,4 @@
 <br>
 
 <%= link_to 'New Tag for this Title', new_newspost_tag_path(@newspost) %>
+<%= link_to 'Back to Newsposts', newsposts_path %>

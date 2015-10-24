@@ -1,5 +1,5 @@
 class Tag < ActiveRecord::Base
-  has_and_belongs_to_many :newsposts
+  belongs_to :newspost
 
   def as_json(options={})
     options[:except] ||= [:id, :created_at, :updated_at]
