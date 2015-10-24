@@ -4,11 +4,17 @@
   <title>Foodbank</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
 
+<script type="text/javascript">
+  $('.ckeditor').ckeditor({
+  // optional config
+});
+</script>
 </body>
 </html>
