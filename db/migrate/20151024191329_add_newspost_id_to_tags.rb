@@ -1,4 +1,4 @@
-class AddLocationIdToTags < ActiveRecord::Migration
+class AddNewspostIdToTags < ActiveRecord::Migration
   def change
   	add_column :tags, :newspost_id, :integer
   end
