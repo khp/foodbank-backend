@@ -9,7 +9,6 @@ class TagsController < ApplicationController
       format.json { render :json => @tags }
       format.html
     end
-
   end
 
   def show
@@ -32,7 +31,7 @@ class TagsController < ApplicationController
     @tag = @newspost.tags.create(tag_params)
 
     respond_to do |format|
-      if @hour.save
+      if @tag.save
         format.html { redirect_to @tag, notice: 'Tag was successfully created.' }
         format.json { render :show, status: :created, location: @tag }
       else
@@ -62,7 +61,7 @@ class TagsController < ApplicationController
     @tag = @newspost.tags.find(params[:id])
     @tag.destroy
     respond_to do |format|
-      format.html { redirect_to Tags_url, notice: 'Tag was successfully destroyed.' }
+      format.html { redirect_to newspost_url(@newspost), notice: 'Tag was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

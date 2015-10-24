@@ -15,8 +15,8 @@
       <tr>
         <td><%= tag.name %></td>
         <td><%= link_to 'Show', newspost_tags_path(@newspost, tag) %></td>
-        <td><%= link_to 'Edit', edit_tag_path(tag) %></td>
-        <td><%= link_to 'Destroy', location_hour_path(@newspost, tag), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_newspost_tag_path(@newspost, tag) %></td>
+        <td><%= link_to 'Destroy', newspost_tag_path(@newspost, tag), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
