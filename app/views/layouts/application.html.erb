@@ -8,13 +8,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= render :file => 'layouts/navbar' %>
 <%= yield %>
-
 <script type="text/javascript">
   $('.ckeditor').ckeditor({
   // optional config
 });
 </script>
+<!-- devise notices -->
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 </body>
 </html>

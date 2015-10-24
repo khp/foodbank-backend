@@ -18,6 +18,7 @@ gem 'bootstrap-slider-rails'
 gem 'nprogress-rails'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'trix'
+gem 'devise'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
