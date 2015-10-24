@@ -8,7 +8,9 @@
 </head>
 <body>
 <%= render :file => 'layouts/navbar' %>
+<div class = "container">
 <%= yield %>
+</div>
 
 <!-- devise notices -->
 <p class="notice"><%= notice %></p>
