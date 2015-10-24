@@ -48,7 +48,7 @@ class HoursController < ApplicationController
 
     respond_to do |format|
       if @hour.update(hour_params)
-        format.html { redirect_to @hour, notice: 'Hour was successfully updated.' }
+        format.html { redirect_to location_hour_path(@location, @hour), notice: 'Hour was successfully updated.' }
         format.json { render :show, status: :ok, location: @hour }
       else
         format.html { render :edit }
