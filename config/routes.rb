@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :hours
   end
 
-  resources :static_pages
+  # Static Pages Routes
+  get '/static_pages/index', to: 'static_pages#index'
+  get '/static_pages/dashboard', to: 'static_pages#dashboard'
 
   resources :newsposts do
     resources :tags
