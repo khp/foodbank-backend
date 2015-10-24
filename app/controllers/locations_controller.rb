@@ -5,6 +5,10 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     @locations = Location.all
+    respond_to do |format| 
+      format.json { render :json => @locations }
+      format.html
+    end
   end
 
   # GET /locations/1

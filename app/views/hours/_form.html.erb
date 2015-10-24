@@ -1,0 +1,32 @@
+<%= form_for([@hour.location, @hour]) do |f| %>
+  <% if @hour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hour.errors.count, "error") %> prohibited this hour from being saved:</h2>
+
+      <ul>
+      <% @hour.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.select :day, [['Monday', 'monday'],['Tuesday', 'tuesday'],['Wednesday', 'wednesday'],['Thursday', 'thursday'],['Friday', 'friday'], ['Saturday', 'saturday'], ['Sunday', 'sunday']] %>
+  </div>
+  <div class="field">
+    <%= f.label :start %><br />
+    <%= f.time_field :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br />
+    <%= f.time_field :end %>
+  </div>
+  <div class="field">
+    <%= f.label :crowd %><br />
+    <%= f.text_field :crowd %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

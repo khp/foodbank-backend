@@ -1,4 +1,4 @@
-class HourController < ApplicationController
+class HoursController < ApplicationController
   before_action :set_hour, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -29,7 +29,7 @@ class HourController < ApplicationController
 
   def create
     @location = Location.find(params[:location_id])
-    @hour = @location.hours.create(params[:hour])
+    @hour = @location.hours.create(hour_params)
 
     respond_to do |format|
       if @hour.save
@@ -76,6 +76,6 @@ class HourController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hour_params
-      params.require(:hour).permit(:type, :start_time, :end_time)
+      params.require(:hour).permit(:crowd, :start, :end, :day)
     end
 end

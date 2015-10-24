@@ -11,14 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023221138) do
+ActiveRecord::Schema.define(version: 20151024013449) do
 
   create_table "hours", force: :cascade do |t|
-    t.datetime "start"
-    t.datetime "end"
-    t.string   "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "location_id"
+    t.string   "day"
+    t.time     "start"
+    t.time     "end"
+    t.string   "crowd"
   end
 
   create_table "locations", force: :cascade do |t|

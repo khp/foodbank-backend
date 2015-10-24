@@ -24,6 +24,14 @@
   <strong>Phone number:</strong>
   <%= @location.phone_number %>
 </p>
+<p>
+  <strong>Hours: </strong>
+  <ul>
+    <% @location.hours.each do |hour| %>
+      <li><%= hour.start %> to <%= hour.end %></li>
+    <% end %>
+  </ul>
+</p>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
