@@ -6,14 +6,20 @@
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong>Contact:</strong>
   <%= @feedback.email %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Message:</strong>
   <%= @feedback.content %>
 </p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @feedback.category %>
+</p>
+
 
 <%= link_to 'Edit', edit_feedback_path(@feedback) %> |
 <%= link_to 'Back', feedbacks_path %>
