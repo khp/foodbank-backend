@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :feedbacks
   resources :locations do
     resources :hours
   end
