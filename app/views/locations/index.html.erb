@@ -10,6 +10,7 @@
       <th>Postal code</th>
       <th>City</th>
       <th>Phone number</th>
+      <th>Hours</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -32,6 +33,7 @@
         </td>
 
         <td><%= link_to 'Add Hours', new_location_hour_path(location.id) %></td>
+        <td><%= link_to 'View Hours', location_hours_path(location.id) %> </td>
         <td><%= link_to 'Show', location %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>
         <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
