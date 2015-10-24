@@ -4,7 +4,7 @@ class NewspostsController < ApplicationController
   # GET /newsposts
   # GET /newsposts.json
   def index
-    @newsposts = Newspost.all
+    @newsposts = Newspost.order(created_at: :asc).all
     respond_to do |format| 
       format.json { render :json => @newsposts }
       format.html
