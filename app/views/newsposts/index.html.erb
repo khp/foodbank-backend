@@ -16,9 +16,9 @@
   <tbody>
     <% @newsposts.each do |newspost| %>
       <tr>
-        <th><%= newspost.title %></th>
-        <td><%= newspost.content %></td>
-        <td><%= newspost.poster %></td>
+        <th><%=raw newspost.title %></th>
+        <td><%=raw newspost.content %></td>
+        <td><%=raw newspost.poster %></td>
         <td>
           <ul>
             <% newspost.tags.each do |tag| %>
