@@ -5,8 +5,9 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body style="background-color:#4190C4">
 <%= render :file => 'layouts/navbar' %>
 <div class = "container">
 <%= yield %>
@@ -16,4 +17,4 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 </body>
-</html>
+</html

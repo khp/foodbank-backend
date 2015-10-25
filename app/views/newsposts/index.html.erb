@@ -2,7 +2,8 @@
 
 <h1>Posts</h1>
 
-<table class = "table">
+
+<table class="table">
   <thead>
     <tr>
       <th>Avatar</th>
@@ -28,10 +29,10 @@
             <% end %>
           </ul>
         </td>
-        <td><%= link_to 'Manage Tags', newspost_tags_path(newspost) %></td>
-        <td><%= link_to 'Show', newspost %></td>
-        <td><%= link_to 'Edit', edit_newspost_path(newspost) %></td>
-        <td><%= link_to 'Destroy', newspost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Manage Tags', newspost_tags_path(newspost), {:style=>'color:#FFFFFF;font-family:Montserrat;'}  %></td>
+        <td><%= link_to 'Show', newspost, {:style=>'color:#FFFFFF;font-family:Montserrat;'} %></td>
+        <td><%= link_to 'Edit', edit_newspost_path(newspost) , {:style=>'color:#FFFFFF;font-family:Montserrat;'} %></td>
+        <td><%= link_to 'Destroy', newspost, :style=>'color:#FFFFFF;font-family:Montserrat;', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +40,5 @@
 
 <br>
 
-<%= link_to 'New Newspost', new_newspost_path %>
+<%= link_to 'New Newspost', new_newspost_path, {:style=>'color:#FFFFFF;font-family:Montserrat;'} %>
+
