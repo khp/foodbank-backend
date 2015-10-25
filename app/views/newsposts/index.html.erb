@@ -17,7 +17,7 @@
   <tbody>
     <% @newsposts.each do |newspost| %>
       <tr>
-        <th><%=image_tag newspost.avatar, :class => "img-circle" %></th>
+        <th><%=image_tag newspost.avatar, :class => "img-circle img-small" %></th>
         <th><%=raw newspost.title %></th>
         <td><%=raw newspost.content %></td>
         <td><%=raw newspost.poster %></td>
