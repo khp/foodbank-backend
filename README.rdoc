@@ -1,28 +1,19 @@
-== README
+== Foodbank - Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This version of the Foodbank API uses Rails 4.2.4 and Ruby 2.2.3
 
-Things you may want to cover:
+Sqlite3 is used in development and Postgres in production
 
-* Ruby version
+Currently there are no populate tasks. I.e. admin user should be added manually.
 
-* System dependencies
+Devise used for user authentication (incomplete)
 
-* Configuration
+No test suite (hackathon...)
 
-* Database creation
+Clone repo, run 'rails s' to start a local instance
 
-* Database initialization
+App runs on Heroku. Demo: foodbank.herokuapp.com
 
-* How to run the test suite
+Endpoints are restful.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Resources available: Newsposts, feedbacks, locations, hours, tags
